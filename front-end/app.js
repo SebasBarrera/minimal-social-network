@@ -39,4 +39,59 @@ document.getElementById('login-button').addEventListener('click', async () => {
     }
 });
 
-// Funciones adicionales se agregarán más adelante
+document.getElementById('post-button').addEventListener('click', async () => {
+    const messageContent = document.getElementById('message-content').value;
+
+    try {
+        const session = await Auth.currentSession();
+        const token = session.getIdToken().getJwtToken();
+
+        const response = await fetch('https://eo54e0tjwa.execute-api.us-east-1.amazonaws.com', {
+            method: 'POST',
+            headers: {
+                'Authorization': token,
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ message: messageContent })
+        });
+
+        if (response.ok) {
+            alert('Mensaje publicado');
+            fetchMessages(); 
+        } else {
+            const errorData = await response.json();
+            alert('Error: ' + errorData.error);
+        }
+    } catch (error) {
+        alert('Error al publicar el mensaje: ' + error.message);
+    }
+});
+
+
+async function fetchMessages() {
+    try {
+        const session = await Auth.currentSession();
+        const token = session.getIdToken().getJwtToken();
+
+        const response = await fetch('https://eo54e0tjwa.execute-api.us-east-1.amazonaws.com/messages', {
+            method: 'GET',
+            headers: {
+                'Authorization': token
+            }
+        });
+
+        const messages = await response.json();
+        const messagesList = document.getElementById('messages-list');
+        messagesList.innerHTML = '';
+
+        messages.forEach(msg => {
+            const listItem = document.createElement('li');
+            listItem.textContent = `[${msg.timestamp}] ${msg.userEmail}: ${msg.message}`;
+            messagesList.appendChild(listItem);
+        });
+    } catch (error) {
+        alert('Error al obtener los mensajes: ' + error.message);
+    }
+}
+
+setInterval(fetchMessages, 5000);
