@@ -45,9 +45,7 @@ La aplicación permite a los usuarios:
 
 ## Arquitectura
 
-![Arquitectura de la Aplicación](capturas/arquitectura.png)
 
-*(Nota: Inserta aquí una imagen que muestre la arquitectura de la aplicación y cómo interactúan los diferentes servicios de AWS.)*
 
 ## Estructura del Proyecto
 
