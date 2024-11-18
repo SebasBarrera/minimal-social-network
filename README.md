@@ -18,11 +18,8 @@ Este proyecto es una aplicación mínima similar a una red social tipo Facebook,
   - [6. Configurar Amazon DynamoDB](#6-configurar-amazon-dynamodb)
   - [7. Configurar AWS Lambda](#7-configurar-aws-lambda)
   - [8. Configurar Amazon API Gateway](#8-configurar-amazon-api-gateway)
-- [Uso de la Aplicación](#uso-de-la-aplicación)
 - [Capturas de Pantalla](#capturas-de-pantalla)
-- [Contribuciones](#contribuciones)
-- [Licencia](#licencia)
-- [Contacto](#contacto)
+
 
 ## Descripción
 
