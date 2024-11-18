@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>AWS Social Network</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>AWS Social Network</h1>
+    <div id="app">
+        <!-- Formularios de registro e inicio de sesión -->
+        <div id="auth">
+            <h2>Registro</h2>
+            <input type="email" id="register-email" placeholder="Email">
+            <input type="password" id="register-password" placeholder="Contraseña">
+            <button id="register-button">Registrarse</button>
+
+            <h2>Inicio de Sesión</h2>
+            <input type="email" id="login-email" placeholder="Email">
+            <input type="password" id="login-password" placeholder="Contraseña">
+            <button id="login-button">Iniciar Sesión</button>
+        </div>
+
+        <!-- Área de publicación y feed -->
+        <div id="social" style="display:none;">
+            <h2>Publicar Mensaje</h2>
+            <textarea id="message-content" placeholder="Escribe tu mensaje"></textarea>
+            <button id="post-button">Publicar</button>
+
+            <h2>Feed de Mensajes</h2>
+            <ul id="messages-list"></ul>
+        </div>
+    </div>
+    <script src="app.js" type="module"></script>
+</body>
+</html>
