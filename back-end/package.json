@@ -1,0 +1,9 @@
+{
+    "name": "aws-social-network-backend",
+    "version": "1.0.0",
+    "type": "module",
+    "dependencies": {
+      "aws-sdk": "^2.1030.0"
+    }
+  }
+  
