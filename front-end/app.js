@@ -1,11 +1,11 @@
 // app.js
-import { Amplify, Auth } from 'https://cdn.jsdelivr.net/npm/aws-amplify@4.6.1/dist/aws-amplify.min.js';
+import { Amplify, Auth } from 'https://cdn.jsdelivr.net/npm/aws-amplify/dist/aws-amplify.min.js';
 
 Amplify.configure({
     Auth: {
-        userPoolId: 'us-east-1_fT7fwBOCq', // Reemplaza con tu User Pool ID
-        userPoolWebClientId: '3172jrrcl2f03qmopd6udio5', // Reemplaza con tu App Client ID
-        region: 'us-east-1' // Reemplaza con tu región, por ejemplo, 'us-east-1'
+        userPoolId: 'us-east-1_fT7fwBOCq', 
+        userPoolWebClientId: '3172jrrcl2f03qmopd6udio5',
+        region: 'us-east-1'
     }
 });
 
